@@ -9,6 +9,15 @@
     <script>
       var app = Elm.Main.fullscreen()
       app.ports.whatever.send(1)
+      /*
+       * The proximate cause is that in send is being called before onEffects
+       * in setupIncomingPort, so the subs haven't been set up yet.
+       * As a result, delaying the send by one tick allows onEffects to be called
+       * and so the incoming port value is picked up.
+       */
+      // setTimeout(function() {
+      //   app.ports.whatever.send(1);
+      // })
     </script>
   </body>
 </html>
