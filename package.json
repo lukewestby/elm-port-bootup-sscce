@@ -1,0 +1,23 @@
+{
+  "name": "elm-port-bootup-sscce",
+  "version": "0.0.1",
+  "description": "A SSCCE for 595",
+  "main": "index.html",
+  "scripts": {
+    "build": "elm-make src/Main.elm --output build/main.js",
+    "start": "http-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukewestby/elm-port-bootup-sscce.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lukewestby/elm-port-bootup-sscce/issues"
+  },
+  "homepage": "https://github.com/lukewestby/elm-port-bootup-sscce#readme",
+  "dependencies": {
+    "http-server": "^0.9.0"
+  }
+}
